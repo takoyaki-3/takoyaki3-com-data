@@ -86,6 +86,20 @@ const main = () => {
   fs.writeFileSync('./dist/tag_list.json', JSON.stringify(tagListJson, null, 2));
   fs.writeFileSync('./dist/recent_updated.json', JSON.stringify(recentUpdatedJson, null, 2));
   createTagJsonFiles(tagArticlesJson);
+
+  // ./src を ./dist/contents にすべてのファイルを再帰的にコピー。フォルダがない場合は作成。
+  if (!fs.existsSync('./dist/contents')) {
+    fs.mkdirSync('./dist/contents');
+  }
+  for (let file of files) {
+    file = file.replace(/\\/g, '/'); // Windows でのパス対応
+    const dest = file.replace('src', 'dist/contents');
+    if (!fs.existsSync(path.dirname(dest))) {
+      fs.mkdirSync(path.dirname(dest), { recursive: true });
+    }
+    console.log(`copy: ${file} -> ${dest}`);
+    fs.copyFileSync(file, dest);
+  }
 };
 
 main();
