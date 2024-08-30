@@ -4,10 +4,6 @@
 
 - [ダイヤ改正による羽田空港への乗客シミュレーション](https://www.musashino-u.ac.jp/academics/pdf/%E3%83%80%E3%82%A4%E3%83%A4%E6%94%B9%E6%AD%A3%E3%81%AB%E3%82%88%E3%82%8B%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF%E3%81%B8%E3%81%AE%E4%B9%97%E5%AE%A2%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.pdf)
 
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-  <iframe src="https://www.musashino-u.ac.jp/academics/pdf/%E3%83%80%E3%82%A4%E3%83%A4%E6%94%B9%E6%AD%A3%E3%81%AB%E3%82%88%E3%82%8B%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF%E3%81%B8%E3%81%AE%E4%B9%97%E5%AE%A2%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.pdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"></iframe>
-</div>
-
 ## 受賞歴
 
 [第２回数理工学コンテスト 最優秀賞](https://www.musashino-u.ac.jp/academics/faculty/engineering/mathematical_engineering/mathematical_engineering_contest.html)
