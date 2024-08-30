@@ -6,13 +6,13 @@
 精密ねじを9か所ほど外すと、カバーを開けることが出来ました。
 なので、SSDとヒートシンクを外します。
 
-![](https://pages.api.takoyaki3.com/pages/lenovo-0b0909e4517b685df812218af632b180.png)
+![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/lenovo-0b0909e4517b685df812218af632b180.png)
 
 しっかりと奥まで差し込み直します。
 
-![](https://pages.api.takoyaki3.com/pages/lenovo-ffe28f9c04bb68ee4aaf2973bc621d61.jpg)
+![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/lenovo-ffe28f9c04bb68ee4aaf2973bc621d61.jpg)
 
 無事、起動することができました。
 
-![](https://pages.api.takoyaki3.com/pages/lenovo-b64468451532eee210b534bdc3b16265.jpg)
+![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/lenovo-b64468451532eee210b534bdc3b16265.jpg)
 
