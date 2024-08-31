@@ -77,28 +77,38 @@
 
 ![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/202408/busan-station.png)
 
-![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/202408/bridge.png)
-
 下関と釜山を結ぶ関釜フェリーは、韓国の会社が保有する「星希」と日本の会社が保有する「はまゆう」の2隻あり、今回は韓国籍の「星希」の方でした。
-出国審査の都合か否か、
+出国審査の都合なのか、21時に出港に関わらず受付手続きは17:30までに済ませる必要がありました。
 
 ![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/202408/ferry.png)
 
-釜山港
+いよいよ釜山港を出発です。
+甲板から釜山の夜景を見ながら海風にあたる時間がこの旅で一番いい時間だった気がします。
 
 ![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/202408/busan-port.png)
 
+虹色に光り輝く釜山大橋が釜山港の出口です。ライトアップの色が移り変わる様子は船旅の醍醐味！！
+
+![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/202408/bridge.png)
+
+釜山大橋の向こうに見える釜山の夜景がかすれてきました。これにて韓国はお別れです。
+
 ![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/202408/bridge-2.png)
 
-ここから先はまた後ほど追記します。
-写真だけ先に一部載せています。
+下関上陸後は、鈍行で広島までコトコト揺られ、広島県の寺家に住む従弟と遊び、その夜にサンライズで東京へ向かいます。
 
 ![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/202408/sunrise.png)
 
+釜関フェリーの中で予約したのですがシングルなら取れました！ノビノビ座席だとあと6000円ほどお安くなります。
+
 ![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/202408/sunrise-room.png)
+
+大阪駅でなにかあったようで、東京駅へは40分遅れでの到着。ソウル駅を出てから約48時間、韓国国内の在来線、船、日本の在来線で東京までたどり着くことができました。
 
 ![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/202408/tokyo-station.png)
 
+在来線と船でもたった2日で到達できる…！！鉄道と船だけで海外を往復した感想として、むしろ近さを感じました。
+
 #### 余談
 
-この後会社に直行した所、さすがに疲労でか体調を崩し、38.6度の熱を出しました…。己の体力の限界を知りました。
+この後会社に直行した所、さすがに疲労でか体調を崩し、38.6度の熱を出しました…。己の体力の限界を知りました🫠
