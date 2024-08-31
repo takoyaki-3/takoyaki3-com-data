@@ -2,7 +2,7 @@
 
 たこやきさんの運営しているサービスは次のようなサーバーは次のような構成で稼働しています。
 
-![](https://pages.api.takoyaki3.com/pages/network.png)
+![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/network.png)
 
 ## リバースプロキシ
 
