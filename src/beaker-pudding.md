@@ -23,17 +23,17 @@
 
 これでビーカーが空くので、砂糖60gにおおさじ2の水を加え、砂糖を溶かしたら、アルコールランプで加熱します。ビーカーが割れて弾けないかちょっと心配でした。
 
-![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/beaker-pudding-0.jpg)
+![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/202408/beaker-pudding-0.jpg)
 
 カラメルを作ってる間にずっとボールの中で本体の液体を寝かせることで空気がプリンに入りずらくなるといいなと期待しました。
 
 カラメルができたら、器にまんべんなくカラメルを移し、本体の液体を注ぎます。カラメルがビーカーの淵などについてしまっていても、生地を流し込んで放置することでカラメルが沈んでくるので問題なしです！
 
-![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/beaker-pudding-1.jpg)
+![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/202408/beaker-pudding-1.jpg)
 
 鍋にキッチンペーパーを敷いて、水を加え、容器ごと加熱します。蓋をして30分ほど蒸しました。
 
-![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/beaker-pudding-2.jpg)
+![](https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/202408/beaker-pudding-2.jpg)
 
 冷蔵庫で冷やすと、ビーカープリン、完成です！！
 あったかい内に味見すると甘かったのですが、適切な温度に冷えると丁度良いお味になりました。
