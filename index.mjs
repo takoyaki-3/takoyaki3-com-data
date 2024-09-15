@@ -1,6 +1,46 @@
 // src/index.js
 import fs from 'fs';
 import path from 'path';
+import axios from 'axios'; // axiosを使用してAPIからデータを取得
+
+const qiitaUrl = 'https://qiita.com/api/v2/users/takoyaki3/items';
+const zennUrl = 'https://zenn.dev/takoyaki3/feed';
+
+// QiitaのJSONデータを取得して保存
+const fetchAndSaveQiitaData = async () => {
+  try {
+    const response = await axios.get(qiitaUrl);
+    const qiitaData = response.data;
+
+    const qiitaDir = './dist/qiita';
+    if (!fs.existsSync(qiitaDir)) {
+      fs.mkdirSync(qiitaDir);
+    }
+
+    fs.writeFileSync(`${qiitaDir}/qiita_data.json`, JSON.stringify(qiitaData, null, 2));
+    console.log('Qiita data saved successfully');
+  } catch (error) {
+    console.error('Error fetching Qiita data:', error);
+  }
+};
+
+// ZennのXMLフィードを取得して保存
+const fetchAndSaveZennData = async () => {
+  try {
+    const response = await axios.get(zennUrl, { responseType: 'text' });
+    const zennData = response.data;
+
+    const zennDir = './dist/zenn';
+    if (!fs.existsSync(zennDir)) {
+      fs.mkdirSync(zennDir);
+    }
+
+    fs.writeFileSync(`${zennDir}/zenn_feed.xml`, zennData);
+    console.log('Zenn feed saved successfully');
+  } catch (error) {
+    console.error('Error fetching Zenn feed:', error);
+  }
+};
 
 const getFiles = (dir) => {
   const files = fs.readdirSync(dir, { withFileTypes: true });
@@ -71,7 +111,8 @@ const createTagJsonFiles = (tagArticles) => {
   }
 };
 
-const main = () => {
+const main = async () => {
+
   const files = getFiles('./src');
   const tagListJson = createTagListJson(files);
   const recentUpdatedJson = createRecentUpdatedJson(files);
@@ -100,6 +141,10 @@ const main = () => {
     console.log(`copy: ${file} -> ${dest}`);
     fs.copyFileSync(file, dest);
   }
+
+  // QiitaデータとZennデータを取得して保存
+  await fetchAndSaveQiitaData(); // Qiitaデータを取得して保存
+  await fetchAndSaveZennData();  // Zennデータを取得して保存
 };
 
 main();
