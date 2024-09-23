@@ -85,7 +85,7 @@ const createRecentUpdatedJson = (files) => {
     }
   }
   recentUpdated.sort((a, b) => new Date(b.updated) - new Date(a.updated));
-  return recentUpdated.slice(0, 10);
+  return recentUpdated;
 };
 
 const createTagArticlesJson = (files) => {
