@@ -9,6 +9,10 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/c23aNJTSwfU" title="Worker Step アプリ紹介" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+  <iframe src="https://takoyaki-3.github.io/takoyaki3-com-data/contents/slide/WorkerStep表彰式発表会.pdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"></iframe>
+</div>
+
 ## 受賞歴
 [第2回東京公共交通オープンデータチャレンジ優秀賞](https://tokyochallenge.odpt.org/2018/award/index.html)
 

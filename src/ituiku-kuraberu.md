@@ -4,6 +4,10 @@
 
 <iframe width="774" height="435" src="https://www.youtube.com/embed/fuvHi2SaVOc" title="いついく？くらべる。Powered by Worker Step １min version" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+  <iframe src="https://takoyaki-3.github.io/takoyaki3-com-data/contents/slide/いついく、くらべる.pdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"></iframe>
+</div>
+
 ## 受賞歴
 [第3回東京公共交通オープンデータチャレンジ審査員特別賞受賞](https://tokyochallenge.odpt.org/2019/award/03.html#g)
 
