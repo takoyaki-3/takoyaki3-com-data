@@ -2,6 +2,7 @@
 
 このリポジトリは、たこやきさんが日々の活動で得た知見や技術情報をまとめたものです。ブログ記事、技術メモ、開発したアプリやサービスの情報、そして過去に参加したコンテストやイベントの記録など、多岐にわたる内容を公開しています。
 
+
 ### 目次
 
 - [プロジェクトの概要](#プロジェクトの概要)
@@ -11,8 +12,9 @@
   - [1. 前提条件](#1-前提条件)
   - [2. 環境変数の設定](#2-環境変数の設定)
   - [3. jsonファイルの生成](#3-jsonファイルの生成)
-  - [4. 生成されるJSONデータの解説](#4-生成されるjsonデータの解説)
-  - [5. ファイルの配布](#5-ファイルの配布)
+  - [4. 新しいページを追加する](#4-新しいページを追加する)
+  - [5. 生成されるJSONデータの解説](#5-生成されるjsonデータの解説)
+  - [6. ファイルの配布](#6-ファイルの配布)
 - [APIエンドポイント](#apiエンドポイント)
 - [ライセンス](#ライセンス)
 
@@ -21,19 +23,20 @@
 このリポジトリは、たこやきさんの技術ブログを支えるためのデータとコードを管理しています。
 ブログ記事のメタデータ（タイトル、タグ、更新日時など）をJSON形式で生成し、ブログサイトで利用できるようにします。
 また、ブログ記事の本文はMarkdown形式で記述されており、画像やスライドなどのメディアファイルも合わせて管理されています。
-
+さらに、QiitaとZennの記事情報を取得し、JSON/XML形式で保存する機能も追加されました。
 
 ### 特徴
 
-- **技術ブログ記事を管理:**  ブログ記事の原稿、コードサンプル、画像などをまとめて管理できます。
+- **技術ブログ記事を管理:** ブログ記事の原稿、コードサンプル、画像などをまとめて管理できます。
 - **タグによる分類:** 記事をタグで分類することで、興味のある分野の記事を簡単に探し出すことができます。
-- **最新情報提供:**  最新のブログ記事や更新情報を取得できます。
+- **最新情報提供:** 最新のブログ記事や更新情報を取得できます。
+- **Qiita/Zenn記事情報の取得:** QiitaとZennの記事情報を取得し、JSON/XML形式で保存できます。
 - **オープンソース:**  誰でも自由に利用、改変、再配布できます。
 
 ### リポジトリ構成
 
 ```
-├── dist # 生成されたJSONデータとコンテンツ
+├── dist # 生成されたJSONデータとコンテンツ、Qiita/Zennデータ
 │   ├── contents # ブログ記事の本文(Markdown)、画像、スライド
 │   │   ├── media
 │   │   │   └── 202408
@@ -45,11 +48,16 @@
 │   │   ├── ...
 │   ├── recent_updated.json # 最新記事一覧
 │   ├── tag_list.json # タグ一覧
+│   ├── qiita # Qiitaの記事データ
+│   │   └── qiita_data.json
+│   └── zenn # Zennの記事データ
+│       └── zenn_feed.xml
 │   └── tags # タグ毎の記事一覧
 │       ├── API.json
 │       ├── IT.json
 │       ├── ...
 ├── index.mjs # jsonファイル生成スクリプト
+├── new_page.mjs # 新しいページを追加するためのスクリプト
 ├── package.json # npm パッケージ管理ファイル
 └── src # 記事データ
     ├── Golang-ProtocolBuffer.json
@@ -61,12 +69,16 @@
 - **src 内の json ファイル:** 各記事のタイトル、タグ、更新日時などのメタデータを格納しています。
 - **src 内の md ファイル:** 各記事の本文を Markdown 形式で記述しています。
 - **index.mjs:** json ファイルを生成し、ブログサイトで利用するデータを作成するスクリプトです。
+- **new_page.mjs:** 新しいページのjsonファイルとmdファイルを作成するためのスクリプトです。
 - **package.json:** npm パッケージ管理ファイルです。
-- **dist ディレクトリ:** `index.mjs` によって生成されたJSONデータとコンテンツが格納されます。
+- **dist ディレクトリ:** `index.mjs` によって生成されたJSONデータとコンテンツ、Qiita/Zennデータが格納されます。
 - **dist/contents ディレクトリ:** `src` ディレクトリの内容がコピーされます。
 - **dist/recent_updated.json:** 最新記事10件のメタデータが格納されます。
 - **dist/tag_list.json:** 使用されているタグと、そのタグが紐付けられている記事IDのリストが格納されます。
 - **dist/tags ディレクトリ:** タグごとに、そのタグが紐付けられている記事のメタデータが格納されます。
+- **dist/qiita ディレクトリ:** Qiitaの記事データ (qiita_data.json) が格納されます。
+- **dist/zenn ディレクトリ:** Zennの記事データ (zenn_feed.xml) が格納されます。
+
 
 ### 使い方
 
@@ -86,9 +98,19 @@ npm install
 npm run build
 ```
 
-上記の commands を実行することで、`dist` ディレクトリに json ファイルが生成されます。
+上記の commands を実行することで、`dist` ディレクトリに json ファイルと `src` ディレクトリの内容がコピーされた `dist/contents` ディレクトリが生成されます。
+さらに、`dist/qiita` ディレクトリにQiitaの記事データ、`dist/zenn` ディレクトリにZennの記事データが保存されます。
 
-#### 4. 生成されるJSONデータの解説
+#### 4. 新しいページを追加する
+
+```bash
+node new_page.mjs {page_id}
+```
+
+上記のコマンドを実行することで、`src`ディレクトリに `{page_id}.json` と `{page_id}.md` が作成されます。
+例えば、`node new_page.mjs new-article` を実行すると `src/new-article.json` と `src/new-article.md` が作成されます。
+
+#### 5. 生成されるJSONデータの解説
 
 ##### dist/recent_updated.json
 ```json
@@ -194,7 +216,7 @@ npm run build
 - 各タグごとに、そのタグが紐付けられている記事のメタデータが配列として格納されています。
 
 
-#### 5. ファイルの配布
+#### 6. ファイルの配布
 
 生成された json ファイルを、ブログサイトのデータとして利用します。
 例えば、`dist/recent_updated.json` を利用してブログサイトのトップページに最新記事一覧を表示したり、`dist/tags/{タグ名}.json` を利用してタグページにそのタグの記事一覧を表示したりすることができます。
@@ -207,6 +229,9 @@ npm run build
 - タグ毎の記事一覧: `https://takoyaki-3.github.io/takoyaki3-com-data/tags/{タグ名}.json`
 - 記事コンテンツ: `https://takoyaki-3.github.io/takoyaki3-com-data/contents/{記事ID}.{拡張子}` (例: `https://takoyaki-3.github.io/takoyaki3-com-data/contents/Golang-ProtocolBuffer.md`)
 - メディアファイル: `https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/...` (例: `https://takoyaki-3.github.io/takoyaki3-com-data/contents/media/202408/beaker-pudding-0.jpg`)
+- Qiita記事一覧: `https://takoyaki-3.github.io/takoyaki3-com-data/qiita/qiita_data.json`
+- Zenn記事フィード: `https://takoyaki-3.github.io/takoyaki3-com-data/zenn/zenn_feed.xml`
+
 
 ### ライセンス
 
