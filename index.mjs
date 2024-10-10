@@ -17,6 +17,12 @@ const fetchAndSaveQiitaData = async () => {
       fs.mkdirSync(qiitaDir);
     }
 
+    // rendered_bodyが大きすぎるため削除
+    for (const item of qiitaData) {
+      delete item.rendered_body;
+      delete item.body;
+    }
+
     fs.writeFileSync(`${qiitaDir}/qiita_data.json`, JSON.stringify(qiitaData, null, 2));
     console.log('Qiita data saved successfully');
   } catch (error) {
