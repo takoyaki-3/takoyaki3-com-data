@@ -1,3 +1,0 @@
-# ブックマーク
-
-https://artificialanalysis.ai
