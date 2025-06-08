@@ -2,6 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import axios from 'axios'; // axiosを使用してAPIからデータを取得
+import { title } from 'process';
 
 const qiitaUrl = 'https://qiita.com/api/v2/users/takoyaki3/items';
 const zennUrl = 'https://zenn.dev/takoyaki3/feed';
@@ -110,6 +111,30 @@ const createTagArticlesJson = (files) => {
   return tagArticles;
 };
 
+// Function to create site descriptions JSON
+const createSiteDescriptionsJson = (files) => {
+  const descriptions = [];
+  for (const file of files) {
+    if (path.extname(file) === '.json') {
+      try {
+        const data = getJson(file);
+        // Ensure both id and description exist and description is not empty
+        if (data.id && data.description && data.description.trim() !== '') {
+          descriptions.push({ id: data.id, title: data.title, description: data.description, tags: data.tags });
+        } else if (data.id) {
+          console.warn(`Skipping ${file}: Missing or empty description for id '${data.id}'. Run add_descriptions.mjs first?`);
+        }
+      } catch (error) {
+        console.error(`Error processing ${file} for descriptions: ${error.message}`);
+      }
+    }
+  }
+  // Optional: Sort by ID if needed
+  // descriptions.sort((a, b) => a.id.localeCompare(b.id));
+  return descriptions;
+};
+
+
 const createTagJsonFiles = (tagArticles) => {
   for (const tag in tagArticles) {
     const filePath = `./dist/tags/${tag}.json`;
@@ -123,6 +148,7 @@ const main = async () => {
   const tagListJson = createTagListJson(files);
   const recentUpdatedJson = createRecentUpdatedJson(files);
   const tagArticlesJson = createTagArticlesJson(files);
+  const siteDescriptionsJson = createSiteDescriptionsJson(files); // Generate descriptions
 
   if (!fs.existsSync('./dist')) {
     fs.mkdirSync('./dist');
@@ -132,7 +158,10 @@ const main = async () => {
   }
   fs.writeFileSync('./dist/tag_list.json', JSON.stringify(tagListJson, null, 2));
   fs.writeFileSync('./dist/recent_updated.json', JSON.stringify(recentUpdatedJson, null, 2));
+  fs.writeFileSync('./dist/site-descriptions.json', JSON.stringify(siteDescriptionsJson, null, 2)); // Write descriptions file
+  console.log('Site descriptions saved to ./dist/site-descriptions.json');
   createTagJsonFiles(tagArticlesJson);
+
 
   // ./src を ./dist/contents にすべてのファイルを再帰的にコピー。フォルダがない場合は作成。
   if (!fs.existsSync('./dist/contents')) {

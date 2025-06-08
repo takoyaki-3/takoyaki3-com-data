@@ -8,5 +8,6 @@
     "IT",
     "メモ"
   ],
-  "file": ""
+  "file": "",
+  "description": "Windows Pro版で、WSL版Dockerのディスクイメージ（`docker_data.vhdx`）を`Optimize-VHD`コマンドで最適化し、Cドライブの容量逼迫を解消する手順を紹介。空き容量を増やす効果あり。"
 }

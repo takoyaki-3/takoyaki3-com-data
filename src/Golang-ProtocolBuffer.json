@@ -5,9 +5,10 @@
   "created": "2023-06-19T11:51:08.7951863+09:00",
   "updated": "2024-08-31T00:00:00.000000000+09:00",
   "tags": [
-   "IT",
-   "メモ",
-   "ProtocolBuffer"
+    "IT",
+    "メモ",
+    "ProtocolBuffer"
   ],
-  "file": ""
- }
+  "file": "",
+  "description": "GolangでProtocol Bufferを使うための手順概要です。`graph.proto`ファイルでグラフ構造（エッジと頂点）を定義し、`protoc`コマンドでGoのコードを生成します。WSL環境での環境構築コマンドも記載。"
+}
