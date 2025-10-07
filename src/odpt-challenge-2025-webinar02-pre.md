@@ -5,7 +5,7 @@
 発表資料は、HTML+CSS+JavaScriptでフルスクラッチで作成しました。
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-  <iframe src="https://takoyaki-3.github.io/takoyaki3-com-data/contents/slide/webinar02-06.pdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"></iframe>
+  <iframe src="https://challenge2025.odpt.org/materials/webinar02-02-3.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"></iframe>
 </div>
 
 [イベントページ](https://challenge2025.odpt.org/webinar02.html)
